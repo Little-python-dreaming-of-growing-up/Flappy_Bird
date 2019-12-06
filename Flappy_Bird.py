@@ -1,4 +1,4 @@
-        import pygame
+import pygame
 import neat
 import time
 import os
@@ -62,7 +62,7 @@ class Bird:
         :return: None
         """
         self.tick_count += 1
-        displacement = self.velocity * self.tick_count + 0.5 * self.tick_count ** 2  # Переменная, отвечающая за 
+        displacement = self.velocity * self.tick_count + 0.5 * self.tick_count ** 2  # Переменная, отвечающая за
         # смещение птички
         if displacement >= 19:
             displacement = 19
@@ -222,7 +222,7 @@ class Base:
         self.last_x_position -= self.xCoord_Changing
 
         if self.start_x_position + self.width < 0:
-            # базовая полоска повторяется вновь и вновь. Сразу после полного первого прохождения, начинается второе 
+            # базовая полоска повторяется вновь и вновь. Сразу после полного первого прохождения, начинается второе
             self.start_x_position = self.last_x_position + self.width
         if self.last_x_position + self.width < 0:
             self.last_x_position = self.start_x_position + self.width
